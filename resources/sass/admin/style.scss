@@ -1,0 +1,155 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Import dello stile per gli errori derivanti da Parsley
+@import 'parsley';
+
+// Font-Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+
+
+//GENERAL
+
+.btn_custom,
+.btn_custom_primary{
+  background-color: $primary-color;
+  border-color:$primary-color;
+  color: white;
+
+  &:hover{
+    color: $fifth-color;
+  }
+}
+
+.btn_custom_secondary{
+  background-color: $fifth-color;
+  border-color:$fifth-color;
+  color: white;
+
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.btn_custom_tertiary{
+  background-color: $tertiary-color;
+  border-color:$tertiary-color;
+  color: white;
+
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.btn-link_custom{
+  color: $primary-color;
+}
+
+//HEADER
+.navbar_custom {
+  position: fixed;
+  width: 100%;
+  background-color: $primary-color;
+  z-index: 100;
+
+  & .navbar-nav .nav-link {
+    color: white !important;
+  }
+}
+
+//DASHBOARD
+
+main{
+  height: 100%;
+  padding-top: 95px;
+  overflow-y: auto;
+}
+
+.sidebar_custom{
+  background-color: $primary-color;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding: 66px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+
+  & li{
+    padding-left: 5px;
+
+    & a {
+      color: white;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+  }
+
+}
+
+
+// PULSANTI INDEX
+
+.btn_custom_info,
+.btn_custom_edit,
+.btn_custom_delete{
+  margin: 2px;
+}
+
+.btn_custom_info{
+  background-color: $fourth-color;
+  border-color: $fourth-color;
+  color: white;
+  
+
+  &:hover{
+    background-color: lighten($color: $fourth-color, $amount: 10%);
+  }
+}
+
+.btn_custom_edit{
+  background-color: $tertiary-color;
+  border-color: $tertiary-color;
+  color: white;
+
+  &:hover{
+    background-color: lighten($color: $tertiary-color, $amount: 10%);
+  }
+}
+
+.btn_custom_delete{
+  background-color: #e3332f;
+  border-color: #e3332f;
+  color: white;
+
+  &:hover{
+    background-color: lighten($color: #e3332f, $amount: 10%);
+  }
+}
+
+
+// PAGINAZIONE INDEX
+.page-item {
+  &.active .page-link{
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  .page-link{
+    color: $primary-color;
+    background-color: #fff;
+  }
+}
+
